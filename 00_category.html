@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<!-- 기존 category html 가져왔습니다. 기존 경로는 주석처리 해놨습니다 개발하실때 주석 풀어주세요 -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>CONIA Categories</title>
+<!--  <link rel="shortcut icon" th:href="@{/resources/images/logo/favicon.ico}"/>-->
+<!--  <link rel="stylesheet" th:href="@{/resources/cssMobile/m_style.css}">-->
+<!--  <link rel="stylesheet" th:href="@{/resources/cssMobile/m_category.css}">-->
+
+<!--  <script th:src="@{/resources/assets/jquery/jquery-1.12.4.min.js}"></script>-->
+<!--  <script th:src="@{/resources/assets/jquery/jquery.revolver.js}"></script>-->
+<!--  <script th:src="@{/resources/js/iscroll.js}"></script>-->
+
+    <link rel="shortcut icon" href="./resources/images/logo/favicon.ico">
+    <link rel="stylesheet" href="./resources/css/m_style.css">
+    <link rel="stylesheet" href="./resources/css/m_category.css">
+    <link rel="stylesheet" href="./resources/css/m_kcp.css">
+
+    <script src="./resources/js/jquery-1.12.4.min.js"></script>
+    <script src="./resources/js/jquery.revolver.js"></script>
+    <script src="./resources/js/iscroll.js"></script>
+
+</head>
+
+<body class="kcp bg_gray">
+<!--<header>-->
+<!--  <div class="header_middle">-->
+<!--    <div class="container">-->
+<!--      <div class="m_user_none" th:if="${userId.isEmpty()}">-->
+<!--        <div class="m_login_dv1">-->
+<!--          <a th:href="|/m/${shopId}/users/login|">로그인</a>-->
+<!--        </div>-->
+<!--        <div class="m_login_dv2">-->
+<!--          <a th:href="|/m/${shopId}/regist|">회원가입</a>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="m_user_none" th:if="${!userId.isEmpty()}">-->
+<!--        <div class="m_login_dv1">-->
+<!--          <a href="/users/logout">로그아웃</a>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="m_user_on" style="display:none" th:if="${!userName.isEmpty()}">-->
+<!--        <h1>반갑습니다, <strong th:text="${userName}"></strong> 님!</h1>-->
+<!--      </div>-->
+<!--      <div class="m_access_right">-->
+<!--        <a class="m_notice_icon" href="javascript:cmmn_LoginAlert();" th:if="${user == null }">-->
+<!--          <div class="ntc_img"></div>-->
+<!--        </a>-->
+<!--        <a class="m_notice_icon" th:href="|/m/${shopId}/notice|" th:if="${user != null }">-->
+<!--          <div class="ntc_img"></div>-->
+<!--        </a>-->
+<!--        <a class="m_cate_close" href="javascript:history.back()"></a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</header>-->
+
+<!--<section class="mo_category">-->
+<!--  <div class="container">-->
+<!--    <div class="m_menu_box">-->
+<!--&lt;!&ndash;      <div class="m_menu_title">&ndash;&gt;-->
+<!--&lt;!&ndash;        <h1>카테고리</h1>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--      <div class="mdeps01">-->
+<!--        <ul>-->
+<!--          <li th:each="c1 : ${categories}">-->
+<!--            <a>-->
+<!--							<span th:onclick="goToCategory([[${shopId}]] , [[${c1.iclassCode}]])"-->
+<!--                    th:text="${c1.className}"></span>-->
+<!--              <button class="btn01" type="button" th:if="${c1.children != null}"></button>-->
+<!--            </a>-->
+<!--            <div class="mdeps_in mdeps02">-->
+<!--              <ul>-->
+<!--                <li th:each="c2: ${c1.children}">-->
+<!--                  <a>-->
+<!--										<span th:onclick="goToCategory([[${shopId}]] , [[${c2.iclassCode}]])"-->
+<!--                          th:text="${c2.className}">\</span>-->
+<!--                    <button class="btn02" type="button" th:if="${c2.children != null}"></button>-->
+<!--                  </a>-->
+<!--                  <div class="mdeps_in mdeps03">-->
+<!--                    <ul>-->
+<!--                      <li th:each="c3: ${c2.children}">-->
+<!--                        <a th:href="|/m/${shopId}/mcItem/itemCate?srhIclassCode=${c3.iclassCode}&iclassLevel=3|">-->
+<!--                          <span th:text="${c3.className}">\</span>-->
+<!--                        </a>-->
+<!--                      </li>-->
+<!--                    </ul>-->
+<!--                  </div>-->
+<!--                </li>-->
+<!--              </ul>-->
+<!--            </div>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="m_service_box">-->
+<!--      <div class="m_menu_title">-->
+<!--        <h1>전체서비스</h1>-->
+<!--      </div>-->
+<!--      <div class="m_service_list">-->
+<!--        <ul>-->
+<!--          <li>-->
+<!--            <a class="ic_box_01" th:href="|/m/${shopId}/mcItem/itemNew|">신상품</a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a class="ic_box_02" th:href="|/m/${shopId}/mcItem/itemBest|">베스트</a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a class="ic_box_04" th:href="|/m/${shopId}/mcItem/itemEvent|">추천상품</a>-->
+<!--          </li>-->
+<!--          <div class="only_logged_in" th:if="${!userId.isEmpty()}">-->
+<!--            <li>-->
+<!--              <a class="ic_box_05" th:href="|/m/${shopId}/mypage|">마이페이지</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a class="ic_box_06" th:href="|/m/${shopId}/mcOrder|">주문내역</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a class="ic_box_08" th:href="|/m/${shopId}/mcCart/cart|">장바구니</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a class="ic_box_09" th:href="|/m/${shopId}/interest|">관심상품</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a class="ic_box_11" th:href="|/m/${shopId}/faq|">자주묻는 질문</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a class="ic_box_12" th:href="|/m/${shopId}/notice|">공지사항</a>-->
+<!--            </li>-->
+<!--          </div>-->
+<!--        </ul>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+<!-- kcp 카테고리 -->
+<section class="mo_category">
+  <div class="close">
+   <a class="close_btn" href="javascript:history.back()"></a>
+  </div>
+  <div class="category">
+    <ul>
+      <li>
+        <a href="04_product.html#location1" class="link">
+          <span class="icon ico-health"></span>
+          <p class="txt">건강끌어올려</p>
+        </a>
+      </li>
+      <li>
+        <a href="04_product.html#location2" class="link">
+          <span class="icon ico-food"></span>
+          <p class="txt">오늘뭐먹지?</p>
+        </a>
+      </li>
+      <li>
+        <a href="04_product.html#location3" class="link">
+          <span class="icon ico-home"></span>
+          <p class="txt">집돌이,집순이</p>
+        </a>
+      </li>
+      <li>
+        <a href="04_product.html#location4" class="link">
+          <span class="icon ico-edit"></span>
+          <p class="txt">자기관리 끝판왕</p>
+        </a>
+      </li>
+      <li>
+        <a href="04_product.html#location5" class="link">
+          <span class="icon ico-crown"></span>
+          <p class="txt">나혼자산다</p>
+        </a>
+      </li>
+      <li>
+        <a href="04_product.html#location6" class="link">
+          <span class="icon ico-electricity"></span>
+          <p class="txt">스트레스 타파</p>
+        </a>
+      </li>
+      <li>
+        <a href="04_product.html#location7" class="link">
+          <span class="icon ico-rocket"></span>
+          <p class="txt">육아 레벨업</p>
+        </a>
+      </li>
+      <li>
+        <a href="04_product.html#location8" class="link">
+          <span class="icon ico-pet"></span>
+          <p class="txt">금쪽같은 댕냥이</p>
+        </a>
+      </li>
+    </ul>
+ </div>
+  <div class="service">
+  <ul>
+    <li>
+      <a href="06_mypage_faq.html" class="link">자주 묻는 질문</a>
+    </li>
+    <li>
+      <a href="06_mypage_qna.html" class="link">Q&A</a>
+    </li>
+    <li>
+      <a href="06_mypage_notice.html" class="link">공지사항</a>
+    </li>
+  </ul>
+  </div>
+  <div class="login">
+<!--    <div class="log user_login" th:if="${userId.isEmpty()}">-->
+<!--      <div class="m_login_dv1">-->
+<!--        <a th:href="|/m/${shopId}/users/login|" class="link">로그인</a>-->
+<!--      </div>-->
+<!--    </div>-->
+    <div class="log user_logout" th:if="${!userId.isEmpty()}">
+      <div class="m_login_dv1">
+        <a href="/users/logout" class="link">로그아웃</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- kcp 카테고리 -->
+
+<!--<div class="fixed_icon">-->
+<!--	<ul>-->
+<!--		<li><a href="#" title="도움말"><img alt="" th:src="@{/resources/images/fixed_icon_x2.png}"></a></li>-->
+<!--		<li><a class="scrollTop" href="#" title="위로가기">-->
+<!--			<img alt="" th:src="@{/resources/images/scolltop_icon_x2.png}">-->
+<!--		</a></li>-->
+<!--	</ul>-->
+<!--</div>-->
+
+<!--<footer class="m_cate_foot">-->
+<!--	<div class="container">-->
+<!--		<ul>-->
+<!--			<li class="m_foot_lg" th:if="${userId.isEmpty()}">-->
+<!--				<a th:href="|/m/${shopId}/users/login|">로그인</a>-->
+<!--			</li>-->
+<!--			<li>-->
+<!--				<a href="#">이용약관</a>-->
+<!--			</li>-->
+<!--		</ul>-->
+<!--	</div>-->
+<!--</footer>-->
+</body>
+
+<script>
+  $(".m_access_right button").click(function () {
+    $(".m_access_right input").toggleClass("submit_show", 5000);
+    $(".header_middle .main_logo").toggleClass("btn_hide");
+  });
+
+  $(document).ready(function () {
+    $("#countDown").revolver({
+
+      // end date (year)
+      year : "2021",
+
+      // end date (month)
+      month : "9",
+
+      // end date (day)
+      day : "14",
+
+      // days Separator
+      daysDel : "DAY",
+
+      // hours Separator
+      hourDel : ":",
+
+      // minutes Separator
+      minDel : ":",
+
+      // seconds Separator
+      secDel : "",
+
+      // text to show when the countdown has finished
+      terminationMessage : "Finish"
+    });
+  });
+
+
+  $(window).scroll(function () {
+
+    var topBanner = $(window).scrollTop();
+
+    if (topBanner > 155) {
+      $(".header_gnb").addClass("gnb_fixed");
+    } else if (topBanner <= 155) {
+      $(".header_gnb").removeClass("gnb_fixed");
+    }
+
+  });
+
+  $(document).ready(function () {
+    $(".fixed_icon ul li a.scrollTop").bind("click", function () {
+      $("html, body").animate({scrollTop : "0"}, 680);
+    });
+  });
+
+  /*푸터 info 슬라이드 */
+  $(document).ready(function () {
+
+    $(".footer_info h1").click(function () {
+
+      var jbWidth = $(window).innerWidth();
+
+      if (jbWidth > 640) {
+        $(this).next().show();
+      } else {
+        $(this).next().slideToggle();
+        $(this).children("img").toggleClass("array");
+      }
+
+    });
+  });
+
+  window.onload = function () {
+    if ($(".m_brand_list").length) {
+      var gnbWidth = 0;
+      $(".m_brand_list #scroller li").each(function () {
+        gnbWidth += ($(this).width());
+      });
+      $(".m_brand_list #scroller").width(gnbWidth + 2);
+      var lgnbScroll = new IScroll(".m_brand_list", {
+        scrollX : true,
+        scrollY : false,
+        mouseWheel : false,
+        eventPassthrough : true
+      });
+    }
+  };
+
+
+  $(document).ready(function () {
+    $(".mo_category .mdeps01 ul li button.btn01").click(function (e) {
+
+      if ($(this).parents("li").hasClass("active")) {
+        $(".mo_category .mdeps01 ul li").removeClass("active");
+
+      } else {
+        $(".mo_category .mdeps01 ul li").removeClass("active");
+        $(this).parents("li").addClass("active");
+      }
+
+    });
+  });
+
+  $(".mdeps01>ul>li>a>button").click(function () {
+    $(this).parent("a").next(".mdeps02").slideToggle();
+    $(this).toggleClass("rotate");
+  });
+
+  $(".mdeps02>ul>li>a>button").click(function () {
+    $(this).parent("a").next(".mdeps03").slideToggle();
+    $(this).toggleClass("rotate");
+  });
+
+  function goToCategory(url1, url2) {
+    var url = "";
+
+    if (url2.length == 2) {
+      url = "/m/" + url1 + "/mcItem/itemCate?srhIclassCode=" + url2 + "&iclassLevel=1";
+    } else if (url2.length == 4) {
+      url = "/m/" + url1 + "/mcItem/itemCate?srhIclassCode=" + url2 + "&iclassLevel=2";
+    }
+
+    location.href = url;
+  }
+</script>
+
+</html>

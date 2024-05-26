@@ -1,0 +1,85 @@
+{
+  "recommend": [{
+    "profileImg" : "men.png",
+    "name": "홍길동 차장",
+    "itemImg" : "orange.jpg",
+    "date" : "2023.01.12.",
+    "title" : "제주도 유기농 한라봉 공구 하실분 계신가요?",
+    "commentCount" : 5362,
+    "likeCount": 562
+  }, {
+    "profileImg" : "men.png",
+    "name": "홍길동 차장",
+    "itemImg" : "coffee.jpg",
+    "date" : "2023.01.12.",
+    "title" : "커피 원두 공구 하실분 계신가요?",
+    "commentCount" : 562,
+    "likeCount": 62
+  },{
+    "profileImg" : "men.png",
+    "name": "김세종 차장",
+    "itemImg" : "",
+    "date" : "2023.01.12.",
+    "title" : "제주도 유기농 반찬 공구 하실분 계신가요?",
+    "commentCount" : 562,
+    "likeCount": 5362
+  },{
+    "profileImg" : "women.png",
+    "name": "이기쁨 대리",
+    "itemImg" : "orange.jpg",
+    "date" : "2023.01.12.",
+    "title" : "제주도 유기농 필라테스 회원권 공구 하실분 계신가요?",
+    "commentCount" : 562,
+    "likeCount": 562
+  },{
+    "profileImg" : "men.png",
+    "name": "홍길동 차장",
+    "itemImg" : "",
+    "date" : "2023.01.12.",
+    "title" : "제주도 유기농 한라봉 공구 하실분 계신가요?",
+    "commentCount" : 1562,
+    "likeCount": 54562
+  }],
+
+  "community": [{
+    "profileImg" : "women.png",
+    "name": "이기쁨 사원",
+    "itemImg" : "foot.jpg",
+    "date" : "2023.01.01.",
+    "title" : "필라테스 6개월 차! 허리가 쫙 펴지는 것 같기도 해요~거북목 개선하는데 꾸준히 해야할듯 합니다. ",
+    "commentCount" : 562,
+    "likeCount": 562
+  }, {
+    "profileImg" : "men.png",
+    "name": "홍길성 차장",
+    "itemImg" : "goguma.jpg",
+    "date" : "2023.01.01.",
+    "title" : "겨울철 감자 고구마 보관 이렇게 하세요~ 살림꿀팁!",
+    "commentCount" : 52,
+    "likeCount": 62
+  },{
+    "profileImg" : "men.png",
+    "name": "이기상 상무",
+    "itemImg" : "",
+    "date" : "2023.01.12.",
+    "title" : "난방방식부터 알아보자! 효율적인 난방관리법",
+    "commentCount" : 62,
+    "likeCount": 62
+  },{
+    "profileImg" : "men.png",
+    "name": "이기쁨 대리",
+    "itemImg" : "",
+    "date" : "2023.01.12.",
+    "title" : "제주도 유기농 필라테스 회원권 공구 하실분 계신가요? 제주도 유기농 필라테스 회원권 공구 하실분 계신가요?",
+    "commentCount" : 562,
+    "likeCount": 562
+  },{
+    "profileImg" : "men.png",
+    "name": "홍길동 차장",
+    "itemImg" : "myOrange.jpg",
+    "date" : "2023.01.12.",
+    "title" : "제주도 유기농 한라봉 공구 하실분 계신가요?",
+    "commentCount" : 152,
+    "likeCount": 54
+  }]
+}

@@ -1,0 +1,28 @@
+/* arranged by SJ */
+
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 300;
+  src:url('resources/images/fonts/NotoSansKR/NotoSansKR-Regular.woff2') format('woff2'),
+      url('resources/images/fonts/NotoSansKR/NotoSansKR-Regular.woff') format('woff'),
+	  url('resources/images/fonts/NotoSansKR/NotoSansKR-Regular.otf') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 500;
+  src:url('resources/images/fonts/NotoSansKR/NotoSansKR-Medium.woff2') format('woff2'),
+      url('resources/images/fonts/NotoSansKR/NotoSansKR-Medium.woff') format('woff'),
+	  url('resources/images/fonts/NotoSansKR/NotoSansKR-Medium.otf') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: bold;
+  font-weight: 700;
+  src:url('resources/images/fonts/NotoSansKR/NotoSansKR-Bold.woff2') format('woff2'),
+      url('resources/images/fonts/NotoSansKR/NotoSansKR-Bold.woff') format('woff'),
+	  url('resources/images/fonts/NotoSansKR/NotoSansKR-Bold.otf') format('embedded-opentype');
+}

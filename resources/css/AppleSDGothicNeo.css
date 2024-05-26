@@ -1,0 +1,74 @@
+/* arranged by SJ */
+
+@font-face {
+    font-family: 'AppleSDGothicNeo';
+    font-style: normal;
+    font-weight: 100;
+    src: url('AppleSDGothicNeo/AppleSDGothicNeoUL.eot');
+    src: url('AppleSDGothicNeo/AppleSDGothicNeoUL.eot?#iefix') format('embedded-opentype'),
+    url('AppleSDGothicNeo/AppleSDGothicNeoUL.woff2') format('woff2'),
+    url('AppleSDGothicNeo/AppleSDGothicNeoUL.woff') format('woff'),
+    url('AppleSDGothicNeo/AppleSDGothicNeoUL.ttf') format('truetype'),
+    url('AppleSDGothicNeo/AppleSDGothicNeoUL.svg#notokr-thin') format('svg');
+}
+
+@font-face {
+    font-family: 'AppleSDGothicNeo';
+    font-style: normal;
+    font-weight: 300;
+    src: url('AppleSDGothicNeo/AppleSDGothicNeoL.eot');
+    src: url('AppleSDGothicNeo/AppleSDGothicNeoL.eot?#iefix') format('embedded-opentype'),
+    url('AppleSDGothicNeo/AppleSDGothicNeoL.woff2') format('woff2'),
+    url('AppleSDGothicNeo/AppleSDGothicNeoL.woff') format('woff'),
+    url('AppleSDGothicNeo/AppleSDGothicNeoL.ttf') format('truetype'),
+    url('AppleSDGothicNeo/AppleSDGothicNeoL.svg#notokr-light') format('svg');
+
+}
+
+@font-face {
+    font-family: 'AppleSDGothicNeo';
+    font-style: normal;
+    font-weight: 400;
+    src: url('AppleSDGothicNeo/AppleSDGothicNeoR.eot');
+    src: url('AppleSDGothicNeo/AppleSDGothicNeoR.eot?#iefix') format('embedded-opentype'),
+    url('AppleSDGothicNeo/AppleSDGothicNeoR.woff2') format('woff2'),
+    url('AppleSDGothicNeo/AppleSDGothicNeoR.woff') format('woff'),
+    url('AppleSDGothicNeo/AppleSDGothicNeoR.ttf') format('truetype'),
+    url('AppleSDGothicNeo/AppleSDGothicNeoR.svg#notokr-regular') format('svg');
+}
+
+@font-face {
+    font-family: 'AppleSDGothicNeo';
+    font-style: bold;
+    font-weight: 500;
+    src: url('AppleSDGothicNeo/AppleSDGothicNeoM.eot');
+    src: url('AppleSDGothicNeo/AppleSDGothicNeoM.eot?#iefix') format('embedded-opentype'),
+    url('AppleSDGothicNeo/AppleSDGothicNeoM.woff2') format('woff2'),
+    url('AppleSDGothicNeo/AppleSDGothicNeoM.woff') format('woff'),
+    url('AppleSDGothicNeo/AppleSDGothicNeoM.ttf') format('truetype'),
+    url('AppleSDGothicNeo/AppleSDGothicNeoM.svg#notokr-medium') format('svg');
+}
+
+@font-face {
+    font-family: 'AppleSDGothicNeo';
+    font-style: bold;
+    font-weight: 700;
+    src: url('AppleSDGothicNeo/AppleSDGothicNeoB.eot');
+    src: url('AppleSDGothicNeo/AppleSDGothicNeoB.eot?#iefix') format('embedded-opentype'),
+    url('AppleSDGothicNeo/AppleSDGothicNeoB.woff2') format('woff2'),
+    url('AppleSDGothicNeo/AppleSDGothicNeoB.woff') format('woff'),
+    url('AppleSDGothicNeo/AppleSDGothicNeoB.ttf') format('truetype'),
+    url('AppleSDGothicNeo/AppleSDGothicNeoB.svg#notokr-bold') format('svg');
+}
+
+@font-face {
+    font-family: 'AppleSDGothicNeo';
+    font-style: bold;
+    font-weight: 900;
+    src: url('AppleSDGothicNeo/AppleSDGothicNeoEB.eot');
+    src: url('AppleSDGothicNeo/AppleSDGothicNeoEB.eot?#iefix') format('embedded-opentype'),
+    url('AppleSDGothicNeo/AppleSDGothicNeoEB.woff2') format('woff2'),
+    url('AppleSDGothicNeo/AppleSDGothicNeoEB.woff') format('woff'),
+    url('AppleSDGothicNeo/AppleSDGothicNeoEB.ttf') format('truetype'),
+    url('AppleSDGothicNeo/AppleSDGothicNeoEB.svg#notokr-black') format('svg');
+}
