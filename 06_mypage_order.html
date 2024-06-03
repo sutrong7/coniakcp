@@ -585,13 +585,13 @@
               <div class="select-list">
                 <ul>
                   <li>
-                    <button type="button" class="btn" onclick="fn_termSearch([[${lastOneMonth}]],[[${nowDay}]],'oneMonth')">최근 1개월</button>
+                    <button type="button" class="btn" onclick="fn_termSearch()">최근 1개월</button>
                   </li>
                   <li>
-                    <button type="button" class="btn" onclick="fn_termSearch([[${lastOneMonth}]],[[${nowDay}]],'oneMonth')">최근 3개월</button>
+                    <button type="button" class="btn" onclick="fn_termSearch()">최근 3개월</button>
                   </li>
                   <li>
-                    <button type="button" class="btn" onclick="fn_termSearch([[${lastOneMonth}]],[[${nowDay}]],'oneMonth')">최근 6개월</button>
+                    <button type="button" class="btn" onclick="fn_termSearch()">최근 6개월</button>
                   </li>
                 </ul>
               </div>
@@ -751,7 +751,7 @@
                           href="https://dev.coniaworld.com/m/jhr011/mcOrder/orderCancel/93c771a4-7316-4fb3-9e03-7004ebaba6e5/1">취소내역</a>
                       </li>
                       <li><a
-                          onclick="fn_itemQna(&#39;ACONICHQ&#39;,&#39;6525f837-24da-47e0-b707-3ad16badebf1&#39;, &#39;93c771a4-7316-4fb3-9e03-7004ebaba6e5&#39;,&#39;1&#39;)"
+                          onclick="fn_itemQna()"
                           class="btn_review" style="cursor:pointer;">문의하기</a></li>
                     </ul>
                   </td>
@@ -1055,7 +1055,7 @@
             <tr id="cancel_inicisRefundacctnum" style="display: none;">
               <th class="ct_txt">계좌번호</th>
               <td>
-                <input id="inicisRefundacctnum" maxlength="20" name="inicisRefundacctnum" onkeyup="this.value=this.value.replace(/[^0-9\-]/g,&#39;&#39;);" type="text">
+                <input id="inicisRefundacctnum" maxlength="20" name="inicisRefundacctnum" onkeyup="this.value=this.value.replace" type="text">
               </td>
             </tr>
             <tr id="cancel_inicisRefundacctname" style="display: none;">
@@ -1277,7 +1277,7 @@
               <tr id="cancel_inicisRefundacctnum" style="">
                 <th class="ct_txt">계좌번호</th>
                 <td>
-                  <input id="inicisRefundacctnum" maxlength="20" name="inicisRefundacctnum" onkeyup="this.value=this.value.replace(/[^0-9\-]/g,&#39;&#39;);" type="text">
+                  <input id="inicisRefundacctnum" maxlength="20" name="inicisRefundacctnum" onkeyup="this.value=this.value.replace();" type="text">
                 </td>
               </tr>
               <tr id="cancel_inicisRefundacctname" style="">
@@ -1504,7 +1504,7 @@
             <tr>
               <th class="ct_txt">계좌번호</th>
               <td>
-                <input id="inicisRefundacctnum" maxlength="20" name="inicisRefundacctnum" onkeyup="this.value=this.value.replace(/[^0-9\-]/g,&#39;&#39;);" type="text">
+                <input id="inicisRefundacctnum" maxlength="20" name="inicisRefundacctnum" onkeyup="this.value=this.value.replace();" type="text">
               </td>
             </tr>
             <tr>
@@ -1519,7 +1519,7 @@
               <td class="userPac">
                 <input id="returnName" name="returnName" type="text" placeholder="이름">
                 <input id="backPostalCode" name="backPostalCode" readonly="" style="width: 100px;" type="hidden" value="">
-                <input id="backReturnAddress1" name="backReturnAddress1" onclick="fn_openAddressApi(&#39;backPostalCode&#39;, &#39;backReturnAddress1&#39;, &#39;&#39;)" readonly="" style="cursor: pointer;" type="text" placeholder="주소">
+                <input id="backReturnAddress1" name="backReturnAddress1" onclick="fn_openAddressApi()" readonly="" style="cursor: pointer;" type="text" placeholder="주소">
                 <input id="backReturnAddress2" name="backReturnAddress2" type="text" placeholder="상세주소">
                 <input id="returnAddress" name="returnAddress" type="hidden">
               </td>
@@ -1745,16 +1745,16 @@
               <td class="returnList">
                 <ul>
                   <li id="ch_reason_2010">
-                    <a href="javascript:void(0);" onclick="fn_change_reason(&#39;2010&#39;)">단순 변심</a>
+                    <a href="javascript:void(0);" onclick="fn_change_reason()">단순 변심</a>
                   </li>
                   <li id="ch_reason_2020">
-                    <a href="javascript:void(0);" onclick="fn_change_reason(&#39;2020&#39;)">주문 실수</a>
+                    <a href="javascript:void(0);" onclick="fn_change_reason()">주문 실수</a>
                   </li>
                   <li id="ch_reason_2030">
-                    <a href="javascript:void(0)" onclick="fn_change_reason(&#39;2030&#39;)">오배송</a>
+                    <a href="javascript:void(0)" onclick="fn_change_reason()">오배송</a>
                   </li>
                   <li id="ch_reason_2040">
-                    <a href="javascript:void(0)" onclick="fn_change_reason(&#39;2040&#39;)">상품 파손</a>
+                    <a href="javascript:void(0)" onclick="fn_change_reason()">상품 파손</a>
                   </li>
                 </ul>
               </td>
@@ -1773,7 +1773,7 @@
               <td class="userPac">
                 <input id="returnName" name="returnName" type="text" placeholder="이름">
                 <input id="changePostalCode" name="changePostalCode" readonly="" style="width: 100px;" type="hidden" value="">
-                <input id="changeReturnAddress1" name="changeReturnAddress1" onclick="fn_openAddressApi(&#39;changePostalCode&#39;, &#39;changeReturnAddress1&#39;, &#39;&#39;)" readonly="" style="cursor: pointer;" type="text" placeholder="주소">
+                <input id="changeReturnAddress1" name="changeReturnAddress1" onclick="fn_openAddressApi()" readonly="" style="cursor: pointer;" type="text" placeholder="주소">
                 <input id="changeReturnAddress2" name="changeReturnAddress2" type="text" placeholder="상세주소">
                 <input id="returnAddress" name="returnAddress" type="hidden">
               </td>
@@ -1910,61 +1910,61 @@
             <input id="starRatingPoint" name="starRatingPoint" type="hidden">
             <div class="startRadio" style="position:relative;">
               <div class="starRadioValue"></div>
-              <label class="startRadio__box" onclick="fn_starRatingPoint(&#39;0.5&#39;)">
+              <label class="startRadio__box" onclick="fn_starRatingPoint()">
                 <input class="starPoint" id="" name="star" type="radio">
                 <span class="startRadio__img">
 									<span class="blind">별 0,5개</span>
 								</span>
               </label>
-              <label class="startRadio__box" onclick="fn_starRatingPoint(&#39;1&#39;)">
+              <label class="startRadio__box" onclick="fn_starRatingPoint()">
                 <input class="starPoint" id="" name="star" type="radio">
                 <span class="startRadio__img">
 									<span class="blind">별 1개</span>
 								</span>
               </label>
-              <label class="startRadio__box" onclick="fn_starRatingPoint(&#39;1.5&#39;)">
+              <label class="startRadio__box" onclick="fn_starRatingPoint()">
                 <input class="starPoint" id="" name="star" type="radio">
                 <span class="startRadio__img">
 									<span class="blind">별 1.5개</span>
 								</span>
               </label>
-              <label class="startRadio__box" onclick="fn_starRatingPoint(&#39;2&#39;)">
+              <label class="startRadio__box" onclick="fn_starRatingPoint()">
                 <input class="starPoint" id="" name="star" type="radio">
                 <span class="startRadio__img">
 									<span class="blind">별 2개</span>
 								</span>
               </label>
-              <label class="startRadio__box" onclick="fn_starRatingPoint(&#39;2.5&#39;)">
+              <label class="startRadio__box" onclick="fn_starRatingPoint()">
                 <input class="starPoint" id="" name="star" type="radio">
                 <span class="startRadio__img">
 									<span class="blind">별 2.5개</span>
 								</span>
               </label>
-              <label class="startRadio__box" onclick="fn_starRatingPoint(&#39;3&#39;)">
+              <label class="startRadio__box" onclick="fn_starRatingPoint()">
                 <input class="starPoint" id="" name="star" type="radio">
                 <span class="startRadio__img">
 									<span class="blind">별 3개</span>
 								</span>
               </label>
-              <label class="startRadio__box" onclick="fn_starRatingPoint(&#39;3.5&#39;)">
+              <label class="startRadio__box" onclick="fn_starRatingPoint()">
                 <input class="starPoint" id="" name="star" type="radio">
                 <span class="startRadio__img">
 									<span class="blind">별 3.5개</span>
 								</span>
               </label>
-              <label class="startRadio__box" onclick="fn_starRatingPoint(&#39;4&#39;)">
+              <label class="startRadio__box" onclick="fn_starRatingPoint()">
                 <input class="starPoint" id="" name="star" type="radio">
                 <span class="startRadio__img">
 									<span class="blind">별 4개</span>
 								</span>
               </label>
-              <label class="startRadio__box" onclick="fn_starRatingPoint(&#39;4.5&#39;)">
+              <label class="startRadio__box" onclick="fn_starRatingPoint()">
                 <input class="starPoint" id="" name="star" type="radio">
                 <span class="startRadio__img">
 									<span class="blind">별 4.5개</span>
 								</span>
               </label>
-              <label class="startRadio__box" onclick="fn_starRatingPoint(&#39;5&#39;)">
+              <label class="startRadio__box" onclick="fn_starRatingPoint()">
                 <input class="starPoint" id="" name="star" type="radio">
                 <span class="startRadio__img">
 									<span class="blind">별 5개</span>
@@ -2241,7 +2241,7 @@
               <td>
                 <div class="ship_post">
                   <input id="postalCode" name="postalCode" readonly="" style="" type="text" value="">
-                  <a onclick="fn_openAddressApi(&#39;postalCode&#39;, &#39;address1&#39;, &#39;address2&#39;)" style="cursor: pointer;">우편번호 찾기</a>
+                  <a onclick="fn_openAddressApi()" style="cursor: pointer;">우편번호 찾기</a>
                 </div>
               </td>
             </tr>
