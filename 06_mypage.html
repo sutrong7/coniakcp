@@ -520,23 +520,8 @@
 		
 		<div class="container">
 			<div class="user_title profile">
-			  <span class="img-box">
-				<th:block th:if="${privacy.profileExt eq '||DEFAULT1||'}">
-					<img alt="" src="/resources/images/img-profile_default.png"/>
-				</th:block>
-				<th:block th:if="${privacy.profileExt eq '||DEFAULT2||'}">
-					<img alt="" src="/resources/images/img-profile01.png"/>
-				</th:block>
-				<th:block th:if="${privacy.profileExt eq '||DEFAULT3||'}">
-					<img alt="" src="/resources/images/img-profile02.png"/>
-				</th:block>
-				<th:block th:if="${privacy.profileExt eq '||DEFAULT4||'}">
-					<img alt="" src="/resources/images/img-profile03.png"/>
-				</th:block>
-				<th:block
-						th:if="${privacy.profileExt ne '||DEFAULT1||' and privacy.profileExt ne '||DEFAULT2||' and privacy.profileExt ne '||DEFAULT3||' and privacy.profileExt ne '||DEFAULT4||'}">
-					<img alt="" th:src="${privacy.profileExtFull}"/>
-				</th:block>
+			  <span class="img-box">			
+					<img alt="" src="resources/images/img-profile_default.png"/>			
 			  </span>
 			  <span class="sub-txt name">강수경 님</span>
 			  <a class="btn btn-setting" th:href="${rootPath} + '/mypage/privacy'"><span class="ico"></span></a>
@@ -642,7 +627,7 @@
 <div class="fixed_icon">
 	<ul>
 		<li style="display: none;"><a href="https://dev.coniaworld.com/m/ninaring_1#" title="도움말"><img alt=""
-																									   src="./00_main_files/images/fixed_icon_x2.png"></a>
+																									   src="resources/images/fixed_icon_x2.png"></a>
 		</li>
 		<li class="scrollTop"><img alt="" src="resources/images/ico_top.png"></li>
 		<!-- 20220826 변경 ksk -->
@@ -891,7 +876,7 @@
 		<div class="m_side_top">
 			<h1>카테고리</h1>
 			<div class="m_side_close">
-				<img alt="" src="./resources/js/m_side_close.png">
+				<img alt="" src="./resources/images/m_side_close.png">
 			</div>
 		</div>
 		<div class="m_side_main">
