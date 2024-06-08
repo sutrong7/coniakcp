@@ -1,3 +1,7 @@
+/* KCP clss 추가 */
+if (!$("body").hasClass("kcp")) {
+    $("body").addClass("kcp");
+}
 
 /* TAB */
 let tabBtn = document.querySelectorAll('.tab-btn');
@@ -69,3 +73,10 @@ function fn_diffDay() {
 }
 
 fn_diffDay();
+
+
+
+/* 콤마 */
+function fn_TransMoney(money) {
+    return money;
+}

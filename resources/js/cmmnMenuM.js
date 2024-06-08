@@ -342,7 +342,7 @@ $(function () {
 var didScroll;
 var lastScrollTop = 0;
 var delta = 50;
-var navbarHeight = $('.header_gnb').outerHeight();
+var navbarHeight = $('.kbp .header_gnb').outerHeight();
 
 $(window).scroll(function (event) {
     didScroll = true;
