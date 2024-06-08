@@ -4554,7 +4554,7 @@ iframe {
     color: #ffffff;
 }
 
-.event .list .d-day{
+.event .list .d-day , .event .list .done{
     color: #fff;
 }
 
