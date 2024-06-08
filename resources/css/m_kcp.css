@@ -4554,6 +4554,10 @@ iframe {
     color: #ffffff;
 }
 
+.event .list .d-day{
+    color: #fff;
+}
+
 .event .ico-like:before {
     background-image: url('../images/ico_like_bk.png');
 }
